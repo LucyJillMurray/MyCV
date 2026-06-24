@@ -1,0 +1,191 @@
+/* =========================================================
+   Font — one typeface used everywhere (Inter)
+   Imported here so you only need to update this one file.
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* =========================================================
+   Theme colours + font token
+   ========================================================= */
+:root {
+    --dark-blue:    #1C1C84;
+    --dark-navy:    #212E52;
+    --white:        #ffffff;
+    --grey:         #43464b;
+    --light-grey:   #888B8D;
+    --sidebar-link: #9db2ff;   /* readable link colour on the dark sidebar */
+    --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* =========================================================
+   Full-width layout
+   Bootstrap's .container is centred with side margins, which
+   leaves a gap on the left. Making it full width lets the
+   sidebar (and the photo above it) reach the left edge.
+   ========================================================= */
+.container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row {
+    --bs-gutter-x: 0;          /* removes the column gap so nothing overflows */
+}
+
+/* =========================================================
+   Base — same font throughout
+   ========================================================= */
+body {
+    font-family: var(--font);
+    color: var(--grey);
+    line-height: 1.55;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ul, li, a {
+    font-family: var(--font);
+}
+
+/* =========================================================
+   Header — big name (now a shorter band)
+   ========================================================= */
+.header {
+    background-color: var(--dark-navy);
+    color: var(--white);
+    text-align: left;
+    padding: 1.5rem 1.5rem;    
+}
+
+.header h1 {
+    color: var(--white);
+    font-size: 3.5rem;         /* the big name */
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.small {
+    display: inline-block;
+    max-width: 680px;
+    color: #d6dcec;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   Sidebar (left column)
+   Padding here gives the text room without pushing the dark
+   background away from the left edge.
+   ========================================================= */
+.sidebar {
+    background-color: var(--dark-navy);
+    color: var(--white);
+    padding: 2rem 1.5rem;
+}
+
+.sidebar h3 {
+    color: var(--white);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 1.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.sidebar p,
+.sidebar li {
+    font-size: 0.92rem;
+}
+
+.sidebar ul {
+    padding-left: 1.1rem;
+    margin-bottom: 0;
+}
+
+.sidebar a {
+    color: var(--sidebar-link);
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Profile photo */
+.photo-wrap {
+    padding: 0 1rem;           /* breathing room to the left and right of the photo */
+}
+
+img.img-fluid {
+    width: 60%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;     /* smaller gap below the photo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* =========================================================
+   Main content (right column)
+   Left/horizontal padding so the words aren't flush to the edge.
+   ========================================================= */
+.main-content {
+    padding: 2rem 2.5rem;
+    color: var(--grey);
+}
+
+.main-content h2 {
+    color: var(--dark-navy);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-top: 2.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--dark-navy);
+}
+
+.main-content h2:first-child {
+    margin-top: 0;
+}
+
+.main-content h3 {
+    color: var(--dark-blue);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-top: 1.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.main-content h4 {
+    color: var(--grey);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.main-content h5 {
+    color: var(--light-grey);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+.main-content p,
+.main-content li {
+    font-size: 0.95rem;
+}
+
+.main-content a {
+    color: var(--dark-blue);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.main-content a:hover {
+    text-decoration: underline;
+}
