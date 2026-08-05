@@ -21,4 +21,13 @@ This website contains:
 - Projects
 - Contact information
 
+## 🛠️ Technologies
+
+This CV website was built using:
+
+- HTML5 for the page structure
+- CSS3 for custom styling
+- Bootstrap 5 for the responsive layout and UI components
+- GitHub Pages for hosting and deployment
+
 Thank you for visiting!
